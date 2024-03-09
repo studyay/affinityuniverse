@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        @font-face {
+            font-family: 'SBAggroB';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Sagak-sagak';
+            src: url('Sagak-sagak.woff') format('woff2');
+            font-style: normal;
+        }
+
+        .myprofile {
+            width: 350px;
+            margin: 30px auto 0px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .myImage {
+            margin-top: 40px;
+            width: 90px;
+            height: 90px;
+            border-radius: 30%;
+
+            background-image: url('logo.png');
+            background-position: center;
+            background-size: cover;
+            box-shadow: 0 0px 50px #FFCF00;
+            box-shadow: 0 0px 50px #00000050;
+            box-shadow: 0 0px 50px #ffffff50;
+
+            /*transition: background-image 0.3s;*/
+        }
+
+        .myName {
+            color: #FFCF00;
+            font-family: 'SBAggroB';
+            font-family: "Montserrat", sans-serif;
+            font-weight: 900;
+            font-style: italic;
+
+            font-size: 35px;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .myAbout {
+            color: white;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 200;
+            font-size: 12px;
+            line-height: 17px;
+
+            width: 250px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        a {
+            width: 230px;
+            height: 50px;
+            background-color: white;
+
+            margin-bottom: 10px;
+            /*padding-left: 40px;*/
+            padding-right: 10px;
+            border-radius: 15px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /*align-items: baseline;*/
+            align-items: center;
+
+            /*font-family: 'Sagak-sagak';
+            font-size: 15px;
+            letter-spacing: 1px;*/
+
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            font-size: 13px;
+            letter-spacing: 0px;
+
+            color: black;
+            text-decoration: none;
+
+            transition: transform 1.0s, border-radius 1.0s;
+        }
+
+        a:hover {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgb(0, 0, 0, 0.3);
+            border-radius: 30px;
+        }
+
+        .a1:hover {
+            background-color: #FF7500;
+        }
+
+        .a2:hover {
+            background-color: #0CB754;
+        }
+
+        .a3:hover {
+            background-color: #FFCF00;
+        }
+
+        .a4:hover {
+            background-color: #FF55D1;
+        }
+
+        .a5:hover {
+            background-color: #FFE9E0;
+        }
+
+        .a6:hover {
+            background-color: #000000;
+            color: white;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var myImage = document.querySelector('.myImage');
+            var a1 = document.querySelector('.a1');
+            var a2 = document.querySelector('.a2');
+            var a3 = document.querySelector('.a3');
+            var a4 = document.querySelector('.a4');
+            var a5 = document.querySelector('.a5');
+            var a6 = document.querySelector('.a6');
+
+            // a1 버튼에 마우스 오버 이벤트 추가
+            a1.addEventListener('mouseover', function () { myImage.style.backgroundImage = "url('Orange.png')";});
+            // a1 버튼에 마우스 아웃 이벤트 추가 (원래 이미지로 되돌리기)
+            //a1.addEventListener('mouseout', function () { myImage.style.backgroundImage = "url('logo.png')"; });
+
+            a2.addEventListener('mouseover', function () { myImage.style.backgroundImage = "url('Green.png')";});
+            //a2.addEventListener('mouseout', function () { myImage.style.backgroundImage = "url('logo.png')"; });
+
+            a3.addEventListener('mouseover', function () { myImage.style.backgroundImage = "url('Yellow.png')";});
+            //a3.addEventListener('mouseout', function () { myImage.style.backgroundImage = "url('logo.png')"; });
+
+            a4.addEventListener('mouseover', function () { myImage.style.backgroundImage = "url('Pink.png')";});
+            //a4.addEventListener('mouseout', function () { myImage.style.backgroundImage = "url('logo.png')"; });
+
+            a5.addEventListener('mouseover', function () { myImage.style.backgroundImage = "url('Blue.png')";});
+            //a5.addEventListener('mouseout', function () { myImage.style.backgroundImage = "url('logo.png')"; });
+
+            a6.addEventListener('mouseover', function () { myImage.style.backgroundImage = "url('Black.png')";});
+            //a6.addEventListener('mouseout', function () { myImage.style.backgroundImage = "url('logo.png')"; });
+
+            myImage.addEventListener('mouseover', function () { myImage.style.backgroundImage = "url('logo.png')";});
+        });
+    </script>
+</head>
+
+<body class="myprofile" style="background-color: #0163FF;">
+    <div class="myImage"></div>
+    <h1 class="myName">Affinity Universe</h1>
+    <p class="myAbout">Metaverse online class without time and space constraints Essential design and marketing education</p>
+
+    <a target="_blank" href="https://affinityuniverse.com/" class="a1">💻 Home page</a>
+    <a target="_blank" href="https://blog.naver.com/affinityuniverse" class="a2">📑 Naver blog</a>
+    <a target="_blank" href="https://pf.kakao.com/_xhbxdib" class="a3">💬 Kakao chnnel</a>
+    <a target="_blank" href="https://www.instagram.com/affinity_universe" class="a4">📷 Instagram</a>
+    <a target="_blank" href="https://www.youtube.com/channel/UCnt1a4QgFoPdNrba-g3yGTw" class="a5">🎬 Youtube</a>
+    <a target="_blank" href="https://cafe.naver.com/veldy" class="a6">☕️ Naver cafe</a>
+</body>
+
+</html>
